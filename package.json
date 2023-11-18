@@ -4,7 +4,8 @@
   "description": "Doctor Appoinment app",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src",
     "client": "npm start --prefix ./client",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"npm start\" \"npm run client\""
@@ -23,6 +24,8 @@
     "moment": "^2.29.4",
     "mongoose": "^7.6.3",
     "morgan": "^1.10.0",
-    "nodemon": "^3.0.1"
+    "netlify-lambda": "^2.0.16",
+    "nodemon": "^3.0.1",
+    "serverless-http": "^3.2.0"
   }
 }
